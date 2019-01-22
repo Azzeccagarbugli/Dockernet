@@ -1,5 +1,5 @@
 <div style="text-align:center">
-    <img src ="https://imgur.com/MVLj4Th.png" />
+    <img src ="https://imgur.com/SAVPZRb.png" />
 </div>
 
 Dockernet è un container **Docker** il quale contiene l'applicativo software **[UFONet](https://ufonet.03c8.net/)**, una BotNet, che sfrutta delle vulnerabilità presenti nel 7° livello OSI, pensata per attacchi informatici di natura DoS e DDoS.
