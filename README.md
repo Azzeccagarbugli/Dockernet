@@ -18,14 +18,14 @@ Fondamentalmente grazie a questa tecnologia è possibile virtualizzare un applic
 
 Ovviamente le caratteristiche di base di UFONet non vengono influenzate in nessun modo, ed è quindi possibile andarle ad utilizzare come se si stesse lavorando su una classica shell. 
 
-È anche possibile utilizzare la stessa interfaccia grafica messa a disposizione da UFONet per accedere più facilmente alle possibilità che esso offre. Per fare ciò basterà utilizzare il comando ```docker-machine ip``` che restituirà appunto un indrizzio IP. Una volta visualizzato sarà possibile visitarlo alla porta **9999** all'interno di un qualsivoglia browser e la *Mothership* salperà lontano nel vasto oceano della rete.
+È anche possibile utilizzare la stessa interfaccia grafica messa a disposizione da UFONet per accedere più facilmente alle possibilità che esso offre. Per fare ciò basterà utilizzare il comando ```sudo docker inspect <container_id> | grep "IPAddress"``` che restituirà appunto un indrizzio IP. Una volta visualizzato sarà possibile visitarlo alla porta **9999**, o semplicemente visitare il server localhost alla medesima, all'interno di un qualsivoglia browser e la *Mothership* salperà lontano nel vasto oceano della rete.
 
 # Installazione
 
 Dopo aver installato correttamente Docker, e sopratutto dopo aver verificato che il suo *deamon* sia attivo in background, si potrà procedere al download del container tramite il seguente comando, che non farà nient'altro che una *pull request* verso il **DockerHub** per ottenere l'immagine di UFONet richiesta:
 
 ```docker
-docker run -d --name ufonet -p 9999:9999 alexandreoda/ufonet
+sudo docker run -d --name ufonet -p 9999:9999 azzeccagarbugli/dockernet
 ```
 
 A questo punto verranno eseguite una serie di operazioni, **in maniera automatica**, che porteranno al deploy instantaneo di UFONet, senza che l'utente si preoccupi delle varie dipendenze richieste. 
@@ -33,7 +33,7 @@ A questo punto verranno eseguite una serie di operazioni, **in maniera automatic
 Fatto ciò si potrà accedere alla bash di UFONet mediante questo comando:
 
 ```docker
-docker exec -ti ufonet /bin/bash
+sudo docker exec -ti ufonet /bin/bash
 ```
 
 L'interfaccia grafica è stata pensata per essere attiva già di default, ma sarà possibile lanciare il seguente comando per verificare che il server Tor Proxy sia attivo e funzionante:
